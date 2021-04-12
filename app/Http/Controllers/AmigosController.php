@@ -39,7 +39,7 @@ class AmigosController extends Controller
         return json_encode(['estatus' => 'success', 'mensaje' => 'Solicitud enviada']);
     }
 
-    public function aceptarSolicitud($idsolicitud)
+    public function aceptarSolicitudes($idsolicitud)
     {
         $amigo = AmigosModels::where('id', $idsolicitud)->where('estatus', '1')->first();
 
@@ -55,7 +55,7 @@ class AmigosController extends Controller
         echo "<h1>Ya puedes cerrar esta ventana</h1>";
     }
 
-    public function verPerfil($idUsuario)
+    public function verPerfiles($idUsuario)
     {
         if($idUsuario == session('usuario')->id)
             return redirect()->route('perfil');
