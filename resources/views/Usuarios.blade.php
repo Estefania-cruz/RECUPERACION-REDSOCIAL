@@ -30,7 +30,7 @@
                         @endforeach
                     @else
                         <div class="alert alert-warning">
-                            aun no hay demaciados usuarios
+                            aun no hay demaciados usuarios inivitalos a crear una cuenta :)
                         </div>
                     @endif
                 </ul>
