@@ -68,15 +68,15 @@ class AmigosController extends Controller
             ->first();
 
         if (!$amigos)
-            return view('ver-perfil', ['estatus' => 'error', 'mensaje' => 'No puedes ver su informacion hasta que sean amigos']);
+            return view('Verperfilesdusuarios', ['estatus' => 'error', 'mensaje' => 'No puedes ver su informacion hasta que sean amigos']);
 
         if ($amigos->estatus != 1)
-            return view('ver-perfil', ['estatus' => 'error', 'mensaje' => 'No puedes ver su informacion hasta que sean amigos']);
+            return view('Verperfilesdusuarios', ['estatus' => 'error', 'mensaje' => 'No puedes ver su informacion hasta que sean amigos']);
 
         $comentarios = ComentariosModels::all();
 
         $publicaciones = PublicacionesModels::where('usuarioId', $idUsuario)->get();
 
-        return view('ver-perfil', ['usuarioPerfil' => $usuarioPerfil, 'publicaciones' => $publicaciones, 'comentarios' => $comentarios]);
+        return view('verPerfilesdusuarios', ['usuarioPerfil' => $usuarioPerfil, 'publicaciones' => $publicaciones, 'comentarios' => $comentarios]);
     }
 }
