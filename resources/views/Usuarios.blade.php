@@ -18,7 +18,7 @@
                             <li class="list-group-item">
                                 <div class="row d-flex justify-content-between">
                                     <div class="col">
-                                        <a href="{{ route('verPerfil', ['idusuario' => $usuario->id]) }}">{{ $usuario->nombre }} {{ $usuario->apellido_paterno }}</a>
+                                        <a href="{{ route('verPerfiles', ['idusuario' => $usuario->id]) }}">{{ $usuario->nombre }} {{ $usuario->apellido_paterno }}</a>
                                     </div>
                                     <div class="col">
                                         <button type="button" id="btnAmigo" onclick="addAmigo({{ $usuario->id }})" class="btn btn-outline-warning">

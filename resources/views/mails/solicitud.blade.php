@@ -21,22 +21,22 @@
 		h1{
 			text-align: center;
 			font-family: 'Verdana';
-			color: #000;
+			color: #a45eca;
 		}
 		p{
 			margin-top: 2%;
 			margin-bottom: 2%;
 			font-family: 'Verdana';
-			color: #000;
+			color: #4d6ebe;
 		}
 		a{
 			display: block;
 			padding: 5px;
 			text-decoration: none;
 			font-size: 20px;
-			background: lightgreen;
+			background: purple;
 			border-radius: 5px;
-			color: #000;
+			color: #7dd6f1;
 		}
 	</style>
 </head>
@@ -47,7 +47,7 @@
 				<h1>¡Hola!</h1>
 				<p>El usuario {{ $datos->de }} quiere añadirte como amigo</p>
 				<p>da click en el boton para aceptar</p>
-				<a href="{{ route('aceptarSolicitud', ['idsolicitud' => $datos->id]) }}">Aceptar</a>
+				<a href="{{ route('aceptarSolicitudes', ['idsolicitud' => $datos->id]) }}">Aceptar y tendras un nuevo amigo en tu red-social</a>
 			</div>
 		</div>
 	</div>
