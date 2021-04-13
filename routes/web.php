@@ -29,7 +29,7 @@ Route::get('/aceptarSolicitudes/{idsolicitud}', [\App\Http\Controllers\AmigosCon
 
 Route::middleware('VerificarUsuario')->group(function (){
     Route::get('/home', [\App\Http\Controllers\UsuarioController::class, 'home'])->name('home');
-    Route::post('/home', [\App\Http\Controllers\PublicacionesController::class, 'publicaciones'])->name('publicaciones');
+    Route::post('/home', [\App\Http\Controllers\PublicacionesController::class, 'publicacion'])->name('publicacion');
 
     Route::post('/like/{idpost?}', [\App\Http\Controllers\PublicacionesController::class, 'like'])->name('like');
     Route::post('/comentar/{idpost?}', [\App\Http\Controllers\ComentariosController::class, 'comentar'])->name('comentar');

@@ -19,7 +19,7 @@
         <div class="col-md-4 col-sm-12">
             <div class="card mt-5">
                 <span class="border-top border-primary border-2"></span>
-                <h3 class="card-title text-center p-3">Publicar algo sobre tu dia</h3>
+                <h3 class="card-title text-center p-3 border-primary">Publicar algo sobre tu dia</h3>
                 @if (isset($estatus))
                     @if ($estatus == 'success')
                         <div class="alert alert-success">
@@ -102,7 +102,7 @@
                                             <input type="hidden" name="idusuario" value="{{ session('usuario')->id }}">
                                             <div class="input-group">
                                                 <span class="input-group-text">Escribe</span>
-                                                <textarea class="form-control" name="comentario" aria-label="With textarea" placeholder="Que piensas?"></textarea>
+                                                <textarea class="form-control" name="comentario" aria-label="With textarea" placeholder="Que deseas compartir el dia de hoy?"></textarea>
                                             </div>
                                             <button type="button" onclick="comentar({{ $publicacion->id }})" class="btn btn-primary">Comentar</button>
                                         </form>
