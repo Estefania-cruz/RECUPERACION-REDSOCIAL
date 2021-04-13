@@ -69,9 +69,9 @@
                             <small class="text-danger">Debe de ser una foto de favor</small>
                             @enderror
                         </div>
-                        <button type="submit" class="btn btn-success w-100">Actualizar</button>
+                        <button type="submit" class="btn btn-action w-100">Actualizar</button>
                     </form>
-                    <a href="{{ route('descargarInfo') }}" target="_blank" class="btn btn-info">Descargar informacion</a>
+                    <a href="{{ route('descargarInfo') }}" target="_blank" class="btn btn-info border-right">Descargar informacion</a>
                 </div>
                 <div class="card">
                     <div class="row">
