@@ -7,7 +7,7 @@ use App\Models\PublicacionesModels;
 use App\Models\UsariosModels;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
-use MongoDB\Driver\Session;
+use Illuminate\Support\Facades\Session;
 
 class UsuarioController extends Controller
 {
@@ -18,7 +18,7 @@ class UsuarioController extends Controller
 
     public function registrarse()
     {
-        return view('registrarse');
+        return view('regirtrarse');
     }
 
     public function home()
@@ -65,7 +65,7 @@ class UsuarioController extends Controller
         if (!$datos->nombre || !$datos->apellidoP || !$datos->apellidoM || !$datos->email || !$datos->password1 || !$datos->password2)
             return view('registrarse', ['estatus' => 'error', 'mensaje' => '¡Los campos no pueden estar vacios!']);
 
-        $usuario = Usuario::where('correo', $datos->email)->first();
+        $usuario = UsariosModels::where('correo', $datos->email)->first();
 
         if($usuario)
             return view('registrarse', ['estatus' => 'error', 'mensaje' => '¡El usuario ya existe!']);
@@ -76,7 +76,7 @@ class UsuarioController extends Controller
         if($password1 != $password2)
             return view('registrarse', ['estatus' => 'error', 'mensaje' => '¡Las contraseñas no coinciden!']);
 
-        $usuario = new Usuario();
+        $usuario = new UsariosModels();
         $usuario->nombre = $datos->nombre;
         $usuario->apellido_paterno = $datos->apellidoP;
         $usuario->apellido_materno = $datos->apellidoM;
@@ -93,7 +93,7 @@ class UsuarioController extends Controller
         if (!$datos->nombre || !$datos->apellidoP || !$datos->apellidoM || !$datos->email)
             return view('perfil', ['estatus' => 'error', 'mensaje' => '¡Los campos no pueden estar vacios!']);
 
-        $usuario = Usuario::find($datos->id);
+        $usuario = UsariosModels::find($datos->id);
         $usuario->nombre = $datos->nombre;
         $usuario->apellido_paterno = $datos->apellidoP;
         $usuario->apellido_materno = $datos->apellidoM;
