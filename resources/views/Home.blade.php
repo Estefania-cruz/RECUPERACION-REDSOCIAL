@@ -31,7 +31,7 @@
                         </div>
                     @endif
                 @endif
-                <form action="{{ route('publicacion') }}" method="POST" enctype="multipart/form-data">
+                <form action="{{ route('publicaciones') }}" method="POST" enctype="multipart/form-data">
                     @csrf
                     <div class="row mb-3">
                         <div class="input-group">

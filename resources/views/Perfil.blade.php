@@ -115,7 +115,7 @@
                                 <div class="row">
                                     <div class="row">
                                         <div class="col-md-6 ml-2">
-                                            <img src="{{ Storage::url($publicacion->foto) }}" class="rounded-circle w-25 ml-2" alt="...">
+                                            <img src="{{ Storage::url($publicacion->foto) }}" class="Cinque Terre " width="150" height="100" alt="...">
                                             <a href="{{ route('verPerfiles', ['idusuario' => $publicacion->user_id]) }}">{{ $publicacion->nombre }}</a>
                                         </div>
                                         <div class="col-md-6">

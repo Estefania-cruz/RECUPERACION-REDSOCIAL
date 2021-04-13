@@ -21,8 +21,8 @@
                                         <a href="{{ route('verPerfiles', ['idusuario' => $usuario->id]) }}">{{ $usuario->nombre }} {{ $usuario->apellido_paterno }}</a>
                                     </div>
                                     <div class="col">
-                                        <button type="button" id="btnAmigo" onclick="addAmigo({{ $usuario->id }})" class="btn btn-outline-warning">
-                                            Añadir amigo a lista
+                                        <button type="button" id="btnAmigo" onclick="addAmigo({{ $usuario->id }})" class="btn btn-outline-primary">
+                                            Añadir amigo a lista pulsa para enviar correo
                                         </button>
                                     </div>
                                 </div>
