@@ -6,7 +6,7 @@
 
 @section('contenido')
     <div class="card w-50 m-auto mt-5">
-        <h3 class="card-title text-center">Registrate</h3>
+        <h3 class="card-title text-center">Registrate aqui para crear una cuenta</h3>
         @if (isset($estatus))
             @if ($estatus == 'error')
                 <div class="alert alert-warning">
@@ -56,8 +56,8 @@
                     <input type="password" class="form-control" name="password2" placeholder="Repite la contraseña" aria-label="Username" aria-describedby="basic-addon1">
                 </div>
             </div>
-            <button type="submit" class="btn btn-success w-100">Registrarse</button>
+            <button type="submit" class="btn btn-outline-info w-100">Registrarse</button>
         </form>
-        <a href="{{ route('login') }}" class="btn-link">Iniciar sesion</a>
+        <a href="{{ route('login') }}" class="btn-link btn btn-secondary">Iniciar sesion</a>
     </div>
 @endsection

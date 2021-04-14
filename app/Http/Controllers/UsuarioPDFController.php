@@ -18,7 +18,7 @@ class UsuarioPDFController extends Controller
 
         $publicaciones = PublicacionesModels::where('usuarioId', $usuario->id)->get()->count();
 
-        $pdf = \PDF::loadView('datos', ['usuario' => $usuario, 'comentarios' => $comentarios, 'publicaciones' => $publicaciones]);
+        $pdf = PDF::loadView('datos', ['usuario' => $usuario, 'comentarios' => $comentarios, 'publicaciones' => $publicaciones]);
 
         return $pdf->download($usuario->nombre.$usuario->apellido_paterno.$usuario->apellido_materno.'.pdf');
     }

@@ -37,7 +37,7 @@ Route::middleware('VerificarUsuario')->group(function (){
     Route::get('/perfil', [\App\Http\Controllers\UsuarioController::class, 'perfil'])->name('perfil');
     Route::post('/perfil', [\App\Http\Controllers\UsuarioController::class, 'actualizarPerfil'])->name('actualizarPerfil');
     Route::get('/perfil/{idusuario}', [\App\Http\Controllers\AmigosController::class, 'verPerfiles'])->name('verPerfiles');
-    Route::get('/descargarInfo', [\App\Http\Controllers\UsuarioPDFController::class, 'descargarInfo'])->name('descargarInfo');
+    Route::get('/descargarInfo', [\App\Http\Controllers\UsuarioPDFController::class, 'descargarInformacion'])->name('descargarInformacion');
 
     Route::get('/usuarios', [\App\Http\Controllers\UsuarioController::class, 'usuarios'])->name('usuarios');
     Route::post('/addAmigo/{idusuario?}', [\App\Http\Controllers\AmigosController::class, 'addAmigoCorreo'])->name('addAmigo');

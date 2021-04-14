@@ -6,7 +6,7 @@
 
 @section('contenido')
     <div class="card w-50 m-auto mt-5">
-        <h3 class="card-title text-center">Inicia sesion</h3>
+        <h3 class="card-title text-center navbar-pink">Inicia sesion</h3>
         @if (isset($estatus))
             @if ($estatus == 'success')
                 <div class="alert alert-success">
@@ -35,8 +35,8 @@
             @if(isset($_GET["oops"]))
                 <input type="hidden" name="url" value="{{$_GET["oops"]}}">
             @endif
-            <button type="submit" class="btn btn-success">Iniciar sesion</button>
+            <button type="submit" class="btn btn-primary btn-lg btn-block">Iniciar sesion</button>
         </form>
-        <a href="{{ route('registrarse') }}" class="btn-link">Registrarse aqui</a>
+        <a href="{{ route('registrarse') }}" class="btn btn-secondary btn-lg">Registrarse aqui</a>
     </div>
 @endsection
